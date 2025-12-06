@@ -44,8 +44,9 @@ export default function LiveNoteTaker() {
         setStatus('🔴 Recording (no audio)');
       }
 
-      captureInterval.current = setInterval(captureFrame, 4000);
-      setTimeout(captureFrame, 500);
+      // Capture every 10 seconds to avoid rate limits
+      captureInterval.current = setInterval(captureFrame, 10000);
+      setTimeout(captureFrame, 2000);
 
       setIsActive(true);
       screenStream.current.getVideoTracks()[0].onended = stopCapture;
@@ -84,7 +85,8 @@ export default function LiveNoteTaker() {
       }
     };
 
-    mediaRecorder.current.start(4000);
+    // Audio chunks every 10 seconds to avoid rate limits
+    mediaRecorder.current.start(10000);
   };
 
   const captureFrame = async () => {
