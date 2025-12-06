@@ -9,7 +9,7 @@ import path from "path";
 dotenv.config();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const flash = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+const flash = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 const app = express();
 app.use(cors());
