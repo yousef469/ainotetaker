@@ -1,70 +1,56 @@
 # 🧠 AI Note Taker
 
-AI-powered note-taking app using Google Gemini Flash for audio transcription, image OCR, and smart note generation.
+Real-time AI-powered note-taking from video lectures using Google Gemini Flash.
 
 ## Features
 
-- 🎤 **Audio Recording** → Transcribe lectures and generate structured notes
-- 📷 **Image Upload** → Extract text from handwritten notes, whiteboards, slides
-- 📝 **Text Input** → Generate flashcards and summaries from any text
-- 🃏 **Auto Flashcards** → Q&A format for studying
-- 🗺️ **Mindmaps** → Nested JSON structure for visualization
+- 🎬 **Live Screen Capture** - Share your screen and watch notes appear in real-time
+- 🎤 **Audio Transcription** - Captures system audio from videos (not mic)
+- 📝 **Smart Notes** - Small quick facts + Big important concepts
+- 🔗 **Pop-out Panel** - Open notes in separate window beside your video
+- 📺 **Overlay Mode** - Notes in corner when video is fullscreen
+- 💾 **Save & Review** - Save notes for later study
+- 🃏 **Auto Flashcards** - AI generates flashcards and practice questions
 
-## Setup
+## Quick Start (Local)
 
-### 1. Get Gemini API Key
+1. Get Gemini API key from [Google AI Studio](https://aistudio.google.com/apikey)
 
-Get your free API key from [Google AI Studio](https://aistudio.google.com/apikey)
-
-### 2. Configure Environment
-
+2. Setup:
 ```bash
 cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY
-```
+# Add your GEMINI_API_KEY to .env
 
-### 3. Install Dependencies
-
-```bash
 npm install
 cd client && npm install
 ```
 
-### 4. Run the App
-
-Terminal 1 (Backend):
+3. Run:
 ```bash
+# Terminal 1 - Backend
 npm run dev
-```
 
-Terminal 2 (Frontend):
-```bash
+# Terminal 2 - Frontend  
 cd client && npm run dev
 ```
 
-Open http://localhost:5173
+4. Open http://localhost:5173
 
-## API Endpoints
+## Deploy to Vercel
 
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/notes/audio` | POST | Upload audio file → get transcription + notes |
-| `/api/notes/image` | POST | Upload image → OCR + structured notes |
-| `/api/notes/screenshot` | POST | Upload screenshot → extract key points |
-| `/api/notes/generate` | POST | Send text → generate flashcards & notes |
+1. Push to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Add Environment Variable: `GEMINI_API_KEY`
+4. Deploy!
 
-## Output Format
+## Usage Tips
 
-All endpoints return structured JSON:
+- **Share tab audio**: When selecting screen, check "Share tab audio" for video sound
+- **Pop-out notes**: Click 🔗 to open notes in separate draggable window
+- **View modes**: Split (⬜⬜), Video only (🖥️), Notes only (📝)
 
-```json
-{
-  "topic": "Physics - Newton's Laws",
-  "summary": "...",
-  "bullet_points": ["..."],
-  "key_terms": [{"term": "...", "definition": "..."}],
-  "flashcards": [{"q": "...", "a": "..."}],
-  "questions": ["..."],
-  "mindmap": {}
-}
-```
+## Tech Stack
+
+- Frontend: React + Vite
+- Backend: Node.js + Express (local) / Vercel Functions (deployed)
+- AI: Google Gemini 2.0 Flash
