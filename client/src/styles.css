@@ -555,3 +555,156 @@ header p { color: #52525b; font-size: 0.85rem; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: rgba(255,255,255,0.02); }
 ::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.4); border-radius: 3px; }
+
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .app {
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 0.75rem 0;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header p {
+    font-size: 0.75rem;
+  }
+
+  .tabs {
+    gap: 0.3rem;
+  }
+
+  .tab-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .panel {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .control-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .control-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .view-modes {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-start, .btn-stop {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .main-area {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 0.5rem;
+  }
+
+  .video-container {
+    min-height: 200px;
+  }
+
+  .video-placeholder span {
+    font-size: 2rem;
+  }
+
+  .video-placeholder p {
+    font-size: 0.8rem;
+  }
+
+  .video-placeholder small {
+    font-size: 0.65rem;
+  }
+
+  .notes-list {
+    max-height: 300px;
+  }
+
+  .notes-overlay {
+    width: 90%;
+    right: 5%;
+    bottom: 0.5rem;
+    max-height: 200px;
+  }
+
+  .overlay-notes {
+    max-height: 150px;
+  }
+
+  .final-content {
+    padding: 0.75rem;
+  }
+
+  .final-title {
+    font-size: 1rem;
+  }
+
+  .final-block h4 {
+    font-size: 0.75rem;
+  }
+
+  .final-block p,
+  .final-block li {
+    font-size: 0.8rem;
+  }
+
+  .terms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcard {
+    padding: 0.6rem;
+  }
+
+  .fc-q, .fc-a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .tab-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .view-modes button {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  .note-item {
+    padding: 0.4rem;
+  }
+
+  .note-text {
+    font-size: 0.75rem;
+  }
+
+  .video-container {
+    min-height: 180px;
+  }
+}
