@@ -1,0 +1,72 @@
+{
+  "title": "Introduction to Loops in C: Simulating a Heartbeat",
+  "notes": {
+    "title": "Introduction to Loops in C: Simulating a Heartbeat",
+    "summary": "This lecture introduces the concept of loops in C programming using the analogy of a heartbeat. Loops allow us to repeat a block of code multiple times. The `for` loop is a common type of loop that executes a block of code a specified number of times. We use `stdio.h` for standard input/output operations. The `meow()` function is a placeholder for any action we want to repeat, like simulating a heartbeat sound. Understanding loops is crucial for creating programs that perform repetitive tasks efficiently.",
+    "bullet_points": [
+      "**Loops:** Structures that allow code to be executed repeatedly.",
+      "**`for` loop:** A control flow statement that executes a block of code a specified number of times. It consists of three parts: initialization, condition, and increment/decrement.",
+      "**`stdio.h`:** A header file in C that provides standard input/output functions like `printf`.",
+      "**Function:** A block of code that performs a specific task. In this example, `meow()` is a function that simulates a heartbeat sound (though its actual implementation is not shown).",
+      "**Iteration:** Each execution of the loop body is called an iteration."
+    ],
+    "examples": [
+      "**Heartbeat Analogy:** A heartbeat is a repetitive action. In programming, loops allow us to simulate repetitive actions like a heartbeat.",
+      "**Code Example:**\n```c\n#include <stdio.h>\n\nvoid meow(void);\n\nint main(void)\n{\n    for (int i = 0; i < 10; i++)\n    {\n        meow();\n    }\n}\n\nvoid meow(void)\n{\n    printf(\"Thump\\n\");\n}\n```\nExplanation: This code uses a `for` loop to call the `meow()` function 10 times. The `for` loop initializes a counter `i` to 0. The loop continues as long as `i` is less than 10. After each iteration, `i` is incremented by 1. The `meow()` function prints \"Thump\" to the console, simulating a heartbeat sound. The `void` in `meow(void)` indicates that the function takes no arguments.",
+      "**Real-world analogy:** Imagine a factory assembly line. Each station performs a specific task on each product that passes through. A loop is like the assembly line, repeatedly performing the same task on different data."
+    ],
+    "key_terms": [
+      {
+        "term": "Loop",
+        "definition": "A programming construct that allows a block of code to be executed repeatedly. Example: `for`, `while`, and `do-while` loops."
+      },
+      {
+        "term": "Iteration",
+        "definition": "A single execution of the loop body. Example: In a `for` loop that runs 10 times, there are 10 iterations."
+      },
+      {
+        "term": "`for` loop",
+        "definition": "A control flow statement for specifying iteration, which allows code to be executed repeatedly. It has three parts: initialization, condition, and increment/decrement. Example: `for (int i = 0; i < 5; i++) { ... }`"
+      },
+      {
+        "term": "Initialization",
+        "definition": "The first part of a `for` loop, used to initialize a counter variable. Example: `int i = 0` in `for (int i = 0; i < 5; i++)`."
+      },
+      {
+        "term": "Condition",
+        "definition": "The second part of a `for` loop, which determines whether the loop continues to execute. Example: `i < 5` in `for (int i = 0; i < 5; i++)`."
+      },
+      {
+        "term": "Increment/Decrement",
+        "definition": "The third part of a `for` loop, which updates the counter variable after each iteration. Example: `i++` in `for (int i = 0; i < 5; i++)`."
+      }
+    ],
+    "flashcards": [
+      {
+        "q": "What are the three parts of a `for` loop, and what does each part do?",
+        "a": "Initialization (sets up the loop counter), Condition (determines when the loop stops), and Increment/Decrement (updates the loop counter after each iteration)."
+      },
+      {
+        "q": "Why are loops important in programming?",
+        "a": "Loops allow us to automate repetitive tasks, making our code more efficient and concise."
+      },
+      {
+        "q": "What happens if the condition in a `for` loop is always true?",
+        "a": "The loop will run indefinitely, creating an infinite loop. This can cause the program to crash or freeze."
+      },
+      {
+        "q": "Explain the purpose of `stdio.h`.",
+        "a": "`stdio.h` is a header file that provides standard input/output functions in C, such as `printf` for printing to the console and `scanf` for reading input from the user."
+      }
+    ],
+    "questions": [
+      "Write a C program that uses a `for` loop to print the numbers from 1 to 10.",
+      "Explain how you would modify the provided heartbeat simulation code to make the heartbeat sound play 20 times instead of 10.",
+      "What is an infinite loop, and how can you prevent it from happening in your code?",
+      "Write a function that takes an integer as input and uses a `for` loop to print the multiplication table for that number up to 10."
+    ]
+  },
+  "transcript": " - Sound of a heartbeat",
+  "visualNotes": "\n```c\n#include <stdio.h>\n\nvoid meow(void);\n\nint main(void)\n{\n    for (int i = ;\n    {\n        meow();\n    }\n}\n```",
+  "createdAt": "2025-12-06T20:50:09.230Z"
+}
